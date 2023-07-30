@@ -1,0 +1,32 @@
+body {
+    background-color:  #14213D;
+}
+.home-header{
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+}
+.home-header-text-box{
+    color:#ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    width: 70%;
+    text-align: center;
+    display: inline-block;
+
+    font-size: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+
+    padding: 15px;
+}
+
+@media screen and (max-width: 650px)
+{
+    .home-header-text-box {
+        font-size: 20px;
+        width: 90%;
+    }
+}
