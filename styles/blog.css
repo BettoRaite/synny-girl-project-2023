@@ -7,9 +7,8 @@
     padding: 15px;
 
     font-weight: bolder;
-    font-family: 'Courgette', cursive;
-    font-family: 'Nunito', sans-serif;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    
 }
 .blog-scroll {
     flex: 2;

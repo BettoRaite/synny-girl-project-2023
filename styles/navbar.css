@@ -2,8 +2,9 @@
     box-sizing: border-box;
 }
 .navbar {
+    font-family: 'Amatic SC', cursive;
     
-    height: 80px;
+    height: 70px;
 
     display: flex;
     justify-content: space-between;
@@ -12,8 +13,10 @@
     border-radius: 5px;
     margin-bottom: 50px;
 
-    box-shadow: 0px 10px 10px rgba(0,0,0,0.05);
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.08);
     
+    background-color: rgba(255,255,255,0.01);
+    transition: flex 1s ease-in;
 }
 .logo-container {
     height: 100%;
@@ -21,14 +24,12 @@
     justify-content: center;
     align-items: center;
 }
+
 .logo {
-    height: 60%;
+    height: 80%;
     border-radius: 100%;
     margin-left: 10px;
-    box-shadow: 1px 1px 10px rgba(255, 94, 0, 1);
-}
-.navbar-links li a {
-    color: #FFFFFF;
+    box-shadow: 0 0 10px rgba(255, 94, 0, 1);
 }
 .navbar-links ul{
     margin: 0;
@@ -37,14 +38,16 @@
 }
 .navbar-links li{
     list-style: none;
-
 }
 .navbar-links li a{
     text-decoration: none;
+
     padding: 1rem;
     display: block;
 
-    font-size: 1.3rem;
+    font-size: 1.7rem;
+
+    color: white;
 }
 
 .navbar-links li:hover{
@@ -54,8 +57,8 @@
 .toggle-button{
     /*Element is out of the normal flow of elements*/
     position: absolute;
-    top: 1.25rem; /*Position on the y-axis from the top to down*/
-    right: 1.8rem;
+    top: 1.8rem; /*Position on the y-axis from the top to down*/
+    right: 1.7rem;
     display: none;
     flex-direction: column; /*Changing flex-direction inside of the child of the flex-container*/
     justify-content: space-between;
@@ -65,7 +68,7 @@
 .toggle-button .bar {
     height: 3px;
     width: 100%;
-    background-color: #EEF1BD;
+    background-color: #ffffff;
     border-radius: 15px;
 }
 /*
@@ -75,65 +78,48 @@
       For this code to run the width
       of a device has to be less than 680px
 */
-@media screen and (max-width: 1000px)
-{
-    .author-title {
-        font-size: 1.3rem;
-    }
-    .navbar-links li a {
-        font-size: 1rem;
-    }
-}
-@media screen and (max-width: 880px)
-{
-    .author-title {
-        font-size: 1.2rem;
-    }
-    .navbar-links li a {
-        font-size: 0.9rem;
-    }
-}
 @media screen and (max-width: 680px){
-    .author-title {
-        font-size: 1.4rem;
+    .navbar-links li a {
+        font-size: 1.65rem;
     }
     .toggle-button {
         display: flex;
+        transition: all 1s;
     }
-    .navbar-links {
-        display: none;
-        width: 100%; 
+    .toggle-button.active-button {
+        
+        transform: rotate(90deg);
+        box-sizing: border-box;
+        padding: 2px;
     }
     .navbar {
-        
-        flex-direction: column;
-        align-items: flex-start;
-        
+        position: relative;
     }
     .navbar-links{
-        
         width: 100%;
-
-        border-radius: 10px;
-        background-color: #8f3506;
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        right: 100%;
+        transition: all 0.9s ease-out;
+        opacity: 0;
     }
     .navbar-links ul{
-        
         flex-direction: column;
-        width: 100%;
-    }
-    .navbar-links li{
-        text-align: center;
+        background-color: rgb(20, 33, 61,0.5);
+        padding: 15px 0;
+        border-radius: 10px;
+        
     }
     .navbar-links li a{
+        text-align: center;
         padding: .5rem 1rem;
+        font-weight: 700;
+        color: white;
     }
     .navbar-links.active {
-        
-        display: flex;
-    }
-    #mobile-menu.is-active .toggle-button:nth-child(1){
-        opacity: 0;
+        right: 0%;
+        opacity: 1;
     }
 }
     

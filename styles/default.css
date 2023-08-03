@@ -1,31 +1,14 @@
-@font-face {
-    font-family: "VT323";
-    src: url(fonts/VT323-Regular.ttf);
-    font-family: "Poppins";
-    src: url(fonts/Poppins/Poppins-Regular.ttf);
-    font-family: "Futura";
-    src: url(fonts/futura/futura\ medium\ bt.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,700&display=swap');
+
 
 body{
     background: linear-gradient(90deg, #14213D,#000000);
     min-height: 100vh; 
-    
 
-
-
-    
     margin: 0;
     padding: 5px 10px;
-
-    font-family: 'Amatic SC', cursive;
-    
-
-    /* font-weight: bolder;
-    font-family: 'Courgette', cursive;
-    font-family: 'Nunito', sans-serif;
-    font-family: 'Poppins', sans-serif; */
-
 }
 .background-image-container {
     position: absolute;
@@ -41,11 +24,6 @@ body{
     filter: blur(5px);
 }
 .blurry-
-p{
-    font-family: 'Courgette', cursive;
-    font-family: 'Nunito', sans-serif;
-    font-family: 'Poppins', sans-serif;
-}
 html{
     scroll-behavior: smooth;
     
