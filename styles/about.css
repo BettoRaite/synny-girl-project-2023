@@ -1,57 +1,83 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
 .about-header {
     margin-bottom: 100px;
 }
 .about-page-title {
-    width: 100%;
     color: rgba(255,255,255,0.8);
-    font-family: 'Roboto', sans-serif;
+    
     text-align: center;
-    font-size: 30px;
+    font-size: 50px;
 }
 .about-line-container {
     display: flex;
     justify-content: center;
 }
 .about-line {
-    min-height: 1px;
+    min-height: 2px;
     width: 50%;
     background-color: rgba(255, 255, 255,0.5);
 }
-.about-flexbox-container {
-    display: flex;
-    justify-content: center;
+.about-bio-grid {
+    box-sizing: border-box;
+    padding: 30px;
 
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    
+    border-radius: 10px;    
     margin-bottom: 50px;
 }
-.about-bio-container {
-    max-width: 50%;
-    min-height: 500px;
-    max-height: 500px;
-    position: relative;
-    border-radius: 10px;
-
-    background-color: white;
-}
 .about-bio-image {
-    position: absolute;
+
     width: 100%;
     height: 100%;
-    right: 0;
-    top: 0;
-    z-index: 1;
     object-fit: cover;
-    border-radius: 10px;
     
-    opacity: 1;
-    transition: all 1.5s;
 }
-.about-bio-image.active-image {
-    opacity: 0;
-    right: 100%;
-}
+
 .about-bio-text {
     box-sizing: border-box;
     padding: 30px;
-    
-}
 
+    line-height: 2rem;
+    font-size: 20px;
+
+    background-color: #E5E5E5;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.about-bio-title {
+    text-align: center;
+    font-size: 40px;
+}
+.website-developer-title-container {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.website-developer-title {
+    font-size: 30px;
+    color: white;
+    opacity: 0.03;
+}
+@media screen and (max-width: 650px){
+    .about-page-title {
+        font-size: 30px;
+    }
+    .about-bio-grid {
+       grid-template-columns: 1fr;
+       padding: 0;
+    }
+    .about-bio-image {
+        display: none;
+    }
+    .about-bio-text {
+        font-size: 17px;
+        font-weight: bold; 
+        border-radius: 5px;
+    }
+}
