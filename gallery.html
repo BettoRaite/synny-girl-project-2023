@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <link rel="stylesheet" href="styles/gallery.css">
+    <script src="js/image-tap-animation.js" defer></script>
     <!-- Default -->
     <link rel="stylesheet" href="styles/default.css">
     <link rel="stylesheet" href="styles/navbar.css">
@@ -56,17 +57,30 @@
     </nav>
     
    <div class="gallery-header-text-container">
-        <p class="gallery-header-text">
+        <h1 class="gallery-header-text">
             Gallery
-        </p>
+        </h1>
     </div>
     
-    a<div class="image-grid">
-        <img class="image-grid-col-2 gallery-grid-row-2 rotating-image" src="rcs/images/26a327ac-cba6-43e2-b3fd-cbbf5b85593e.jpeg">
-        <img src="rcs/images/297731633_181047011164635_5764480794281178876_n.jpg">
-        <img src="rcs/images/375c0185-1a5a-4abd-a100-674c6e3e4e74.jpeg">
-        <img src="rcs/images/aa41e726-8df2-479a-aa9e-d77bdffcdf04.jpeg">
-        <img class="image-grid-col-2 gallery-grid-row-2 rotating-image" src="rcs/images/3ea65ee5-c515-4286-8803-e8926774e354.jpeg">
+    <div class="gallery-image-grid">
+        <div class="gallery-grid-image-container">
+            <img class="gallery-grid-image" src="rcs/images/26a327ac-cba6-43e2-b3fd-cbbf5b85593e.jpeg">
+            
+
+            <button class="tap-button">
+                Tap
+            </button>
+            <div class="image-description-container">
+                <h1 class="image-name-title">
+                    I'm your waify
+                </h1>
+                <p class="image-author-name">
+                    By synny girl
+                </p>
+            </div>
+        </div>
+    
+        
 
     </div>
 
