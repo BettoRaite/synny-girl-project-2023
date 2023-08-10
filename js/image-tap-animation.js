@@ -1,26 +1,26 @@
 const buttons = document.querySelectorAll('.tap-button');
 const images = document.getElementsByClassName('gallery-grid-image');
-
+const descriptionWindows = document.getElementsByClassName('image-description-container')
+const gridLayerMask = document.getElementById('grid-layer-mask');  
 buttons.forEach((button, index) => {
-  button.addEventListener('click', () => {
-    if(images[index].classList.toggle('active'))
-    {
-      scaleUpImage(index)
-    }
-    else
-    {
-      scaleDownImage(index)
-    }
+  button.addEventListener('click', function(){
+    gridLayerMask.classList.toggle('active-grid-layer');
+    button.classList.toggle('tap-button-active');
+    images[index].classList.toggle('active-image');
+    descriptionWindows[index].classList.toggle('active-description-window');
   });
 });
 
-function scaleUpImage(index) {
 
-  images[index].style.transform = 'scale(1.5)';
-  images[index].style.transition = 'transform 0.3s ease';
-}
-function scaleDownImage(index) {
 
-  images[index].style.transform = 'scale(1)';
-  images[index].style.transition = 'transform 0.3s ease';
-}
+// button.addEventListener('click', () => {
+//   images[index].classList.toggle('active-image');
+//   gridLayerMask.classList.toggle('active-grid-layer');
+//   descriptionWindow[index].classList.toggle('active-description-window');
+  
+//   descriptionWindow[index].addEventListener('click',function(){
+//     gridLayerMask.classList.toggle('active-grid-layer');
+//     descriptionWindow[index].classList.toggle('active-description-window');
+//     images[index].classList.toggle('active-image');
+//   });
+// });
