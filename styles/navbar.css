@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 .navbar {
-    font-family: 'Amatic SC', cursive;
+    font-family: 'Bad Script', cursive;
     
     height: 70px;
 
@@ -46,7 +46,7 @@
     padding: 1rem;
     display: block;
 
-    font-size: 1.7rem;
+    font-size: 1.5rem;
 
     color: white;
 }
