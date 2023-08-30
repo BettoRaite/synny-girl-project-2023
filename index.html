@@ -1,69 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/home.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <script src="js/scrollHorizontally.js" defer></script>
     <!-- Default -->
-    <link rel="stylesheet" href="styles/default.css">
-    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/default.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
     <script src="js/navbar.js" defer></script>
+
     <title>Portfolio</title>
-
-
-</head>
-<body>
-    
-<!--      
-        <div class="banner" class="sticky-banner">
-        <img src="rcs/26a327ac-cba6-43e2-b3fd-cbbf5b85593e.jpeg" class="banner-img">
-        
-        <img src="rcs/375c0185-1a5a-4abd-a100-674c6e3e4e74.jpeg" class="banner-img">
-        </div>
-    -->
-    
-
-    <div class="background-image-container"></div>
+  </head>
+  <body id="background">
+    <div class="background-image"></div>
 
     <nav class="navbar">
-        
-        <div class="logo-container">
-            <img class="logo" src="rcs/images/stable-diffusion-xl (11).jpeg">
-        </div>
+      <div class="logo-container">
+        <img class="logo" src="rcs/images/stable-diffusion-xl (11).jpeg" />
+      </div>
 
-        <a href="#" class="toggle-button"> 
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </a>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
 
+      <div class="navbar-links">
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
 
-        <div class="navbar-links">
-            <ul>
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                
-                <li>
-                    <a href="gallery.html">Gallery</a>
-                </li>
-                    
-                <li>
-                    <a href="contact-me.html">Contact me</a>
-                </li>
-    
-                
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-                
-            </ul>    
-        </div>
+          <li>
+            <a href="gallery.html">Gallery</a>
+          </li>
+
+          <li>
+            <a href="contact-me.html">Contact me</a>
+          </li>
+
+          <li>
+            <a href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
+    <main class="horizontal-scrool-wrapper">
+      <section class="horizontal-scrool-wrapper__header">
+        <div class="header__quote-container">
+          <h1 class="quote">``Passion and art can feed the heart.``</h1>
+        </div>
+        <div class="header__scroll-prompt-container">
+          <p class="header__scroll-prompt">Scrool down</p>
+          <img
+            class="scroll-arrow-icon"
+            src="rcs/images/down-arrow-png-down-filled-icon-1600-1467465071.png"
+            alt=""
+          />
+        </div>
+      </section>
 
+      <section class="horizontal-scrool-wrapper__horizontal-scrool">
+        <button class="horizontal-scrool__left-btn" id="slide-left-btn">
+          <img
+            class="left-btn__icon"
+            src="rcs/images/arrow_back_ios_FILL0_wght400_GRAD0_opsz24.svg"
+            alt=""
+          />
+        </button>
 
-   
-   
-</body>
+        <div class="horizontal-scrool__slideshow">
+          <div class="slideshow__items-container">
+            <div class="slideshow__item">
+              <p class="slideshow__item-text1">
+                Do you know what is
+                <span class="text-purple-background" style="border-radius: 5px">art?</span>
+              </p>
+              <img
+                class="slideshow__item-image1"
+                src="rcs/images/benjamin-davies-JrZ1yE1PjQ0-unsplash (1).jpg"
+                alt=""
+              />
+            </div>
+            <div class="slideshow__item slideshow__item--hidden-right">
+              <p class="slideshow__item-text2">
+                It's passion and it's
+                <span
+                  style="
+                    color: rgba(255, 0, 0, 0.5);
+                    background-color: rgb(255, 255, 255, 0.9);
+                    padding: 0 5px;
+                    border-radius: 5px;
+                  "
+                  >love.</span
+                >
+              </p>
+              <img
+                class="slideshow__item-image2"
+                src="rcs/images/japheth-mast-A6QEpNxE8uo-unsplash.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class="slideshow__item slideshow__item--hidden-right">
+              <p id="slideshow__item-text3">
+                <span>It's a way for us to connect to each other</span>
+              </p>
+
+              <img
+                class="slideshow__item-image3"
+                src="rcs/images/kipras-streimikis-00JuluDEK5w-unsplash.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class="slideshow__item slideshow__item--hidden-right">
+              <p id="slideshow__item-text4">Now. More lies in my gallery.</p>
+              <img
+                id="slideshow__item-image4"
+                src="rcs/images/anthony-intraversato-5WYkd62XxTo-unsplash.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <button class="horizontal-scrool__right-btn" id="slide-right-btn">
+          <img
+            class="right-btn__icon"
+            src="rcs/images/arrow_forward_ios_FILL0_wght400_GRAD0_opsz24.svg"
+            alt=""
+          />
+        </button>
+      </section>
+    </main>
+  </body>
 </html>

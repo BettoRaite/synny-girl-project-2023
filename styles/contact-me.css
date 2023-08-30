@@ -1,72 +1,104 @@
 .contact-me-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    column-gap: 30px;
-    padding: 0 100px;
-    min-height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  column-gap: 30px;
+  padding: 0 100px;
+  min-height: 500px;
 
-    margin-top: 100px;
-    margin-bottom: 100px;
-    font-family: 'Roboto Condensed', sans-serif;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  font-family: "Roboto Condensed", sans-serif;
 }
-.contact-me-text-container {
-    width: 55%;
-    margin: auto;
-    color: #E5E5E5;
-
+.contact-me-grid__text-container {
+  width: 90%;
+  margin: auto;
+  color: #e5e5e5;
 }
 .contact-me-text {
-    font-size: 45px;
-   color: #FFFFFF;
+  font-size: 45px;
+  color: #ffffff;
 }
-.contact-me-form-container {
-    height: 100%;
-    background-color: white;
-    border-radius: 10px;
-    display: grid;
-    grid-template-rows: 80% 20%;
+.contact-me-grid__form-container {
+  height: 90%;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column;
+  padding: 10px 20px;
 
-    color: rgba(0,0,0,0.8);
+  color: rgba(0, 0, 0, 0.8);
 }
-.contact-me-form-input-container {
-    display: grid;
-    grid-template-rows: 1fr 1fr 2fr;
+.contact-me-grid__form-container input,
+textarea {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 10px;
 }
-.contact-me-form-input-container p{
+
+.send-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.send-button {
+  padding: 20px 100px;
+  font-size: 20px;
+  background-color: #ffc300;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+.send-button:hover {
+  background-color: rgb(237, 181, 0);
+}
+.send-button:active {
+  color: black;
+  background-color: rgb(255, 255, 255);
+}
+@media screen and (max-width: 920px) {
+  .contact-me-grid {
+    padding: 0;
+    padding-right: 50px;
+  }
+  .contact-me-text {
+    font-size: 40px;
+  }
+  .contact-me-grid__text-container {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 770px) {
+  .contact-me-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 500px);
+    row-gap: 50px;
+    padding: 0 50px;
+  }
+  .contact-me-grid__text-container {
+    width: 70%;
     margin: 0;
-    margin-bottom: 5px;
+    justify-self: center;
+  }
+  .contact-me-text {
+    font-size: 40px;
+  }
 }
-.contact-me-form-input-container > * {
-    display: grid;
-    grid-template-rows: auto 1fr;
-    align-items: end;
-    padding: 30px;
-    font-size: 20px;
-    height: 100%;
-     margin: 0;
-}
-.message-input-container {
-    grid-template-rows: auto 1fr;
-}
-.message-input {
-    height: 100%;
-}
-.submit-button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.submit-button {
-    padding: 20px 100px;
-    font-size: 20px; 
-    background-color: #ffc300;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.25);
-    
-input {
-    border: 1px solid rgba(0,0,0,0.2);
-    border-radius: 5px;
+@media screen and (max-width: 470px) {
+  .contact-me-grid__text-container {
+    width: 90%;
+    margin: 0;
+    justify-self: center;
+  }
+  .contact-me-grid {
     padding: 10px;
+    row-gap: 0px;
+  }
+  .contact-me-text {
+    font-size: 30px;
+  }
 }
