@@ -32,7 +32,15 @@
   height: 80%;
   border-radius: 100%;
   margin-left: 10px;
-  box-shadow: 0 0 10px rgba(255, 94, 0, 1);
+  animation: glow 3s infinite alternate;
+}
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px rgba(255, 94, 0, 0.7);
+  }
+  to {
+    box-shadow: 0 0 15px rgba(255, 94, 0, 1);
+  }
 }
 .navbar-links ul {
   margin: 0;
